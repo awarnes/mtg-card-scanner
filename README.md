@@ -1,5 +1,9 @@
 # MTG Card Scanning App
 
+# UNDER DEVELOPMENT #
+
+A desktop application to scan magic cards and export them as a CSV for any kind of card managment/deck building functionality.
+
 Goal: Collects data and exports to CSV, no internal storage or management
 
 ### Use
