@@ -1,0 +1,19 @@
+<main_kv>
+	BoxLayout:
+		orientation: 'vertical'
+		size: root.width, root.height
+
+		NavBar:
+			size_hint: [None, None]
+
+		Label:
+			id: first
+			text: 'hello'
+			font_size: 32
+
+		Button:
+			id: button
+			text: 'Button'
+			font_size: 32
+			on_release: root.thingy()
+

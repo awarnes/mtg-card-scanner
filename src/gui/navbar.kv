@@ -1,0 +1,24 @@
+<FileDropDown>:
+    id: file_menu
+
+    Button:
+        text: 'Open Movie...'
+
+    Button:
+        text: 'Check for DB Updates'
+
+    Button:
+        text: 'Export Collection'
+
+    Button:
+        text: 'Quit'
+
+<EditDropDown>:
+    id: edit_menu
+
+    Button:
+        text: 'Change camera'
+        on_release: root.select('change camera')
+    Button:
+        text: 'Advanced Settings'
+        on_release: root.select('advanced settings')
