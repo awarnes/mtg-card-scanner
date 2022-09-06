@@ -1,7 +1,8 @@
-from PySide6.QtCore import Qt
-from PySide6.QtGui import QAction, QKeySequence
-from PySide6.QtWidgets import QMainWindow, QLabel, QMenu
+from PySide6.QtCore import Qt, Slot
+from PySide6.QtGui import QImage, QPixmap
+from PySide6.QtWidgets import QMainWindow, QLabel, QPushButton, QVBoxLayout
 from .menu import createMenuBar
+from .video import VideoFeed, VideoThread
 class MainWindow(QMainWindow):
 
     def __init__(self):
@@ -12,6 +13,10 @@ class MainWindow(QMainWindow):
 
         createMenuBar(self)
 
-        tempLabel = QLabel("Hello, World!")
-        tempLabel.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-        self.setCentralWidget(tempLabel)
+        self.videoThread = VideoThread()
+
+        self.videoFeed = VideoFeed(self.videoThread)
+
+        self.setCentralWidget(self.videoFeed)
+
+        self.videoThread.changePixmap.connect(self.videoFeed.setImage)
