@@ -4,3 +4,4 @@ scanner-venv
 .DS_Store
 data/mtg-cards/*
 !.gitkeep
+db/mtg_scan.db

@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS patch_history (
+    patch_name TEXT NOT NULL,
+    date_applied TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
